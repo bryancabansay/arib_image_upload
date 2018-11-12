@@ -9,7 +9,6 @@ from django.views.decorators.csrf import csrf_exempt
 def index(request):
   return render(request, 'test_app/index.html')
 
-@csrf_exempt
 def upload_image(request):
   image_data = b64decode(request.POST.get("image_data", ""))
   filename = 'image_test.jpeg'
